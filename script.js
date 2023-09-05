@@ -71,7 +71,10 @@ function paintSquare(){
 }
 function somar(){
     const numbers = document.getElementById("soma").value;
-    const arrayNumbers = numbers.split(',').map(Number);
+    if(document.getElementById("soma").value == ''){
+        document.getElementById("somado").innerText = "Digite números para somar!"
+    } else {
+        const arrayNumbers = numbers.split(',').map(Number);
     console.log(arrayNumbers)
     let soma = 0;
     arrayNumbers.forEach(element => {
@@ -79,4 +82,6 @@ function somar(){
     });
 
     document.getElementById("somado").innerText = `A soma é ${soma}!`
+    }
+    
 }
