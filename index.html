@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <main>
+       <section class="imc">
+            <h1>Calculadora de IMC</h1>
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso">
+            <label for="Altura">Altura (m):</label>
+            <input type="number" id="altura">
+            <input type="submit" value="Calcular" onclick="calcularIMC()">
+            <span id="resultado"></span>
+       </section>
+       <section class="paint">
+        <h1>Pinte os Quadrados</h1>
+        <label for="square">Digite 4 números</label>
+        <input type="text" id="square">
+        <input type="submit" value="Pintar" onclick="paintSquare()">
+        <p id="validation"></p> 
+        <div class="squares">
+            <div class="square" id="1"></div>
+            <div class="square" id="2"></div>
+            <div class="square" id="3"></div>
+            <div class="square" id="4"></div>   
+        </div>
+       </section>
+       <section class="soma">
+            <h1>Soma Geral</h1>
+            <label for="soma">Digite números</label>
+            <span>Separados por vírgula</span>
+            <input type="text" name="soma" id="soma">
+            <input type="submit" value="Calcular" onclick="somar()">
+            <p id="somado"></p>
+       </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
