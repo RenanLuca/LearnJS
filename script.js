@@ -17,7 +17,7 @@ function imc(peso, altura) {
     }
     return document.getElementById("resultado").innerText = `Seu IMC é ${imc.toFixed(2)} (${resultado}).`;;
 }
-function calcularIMC() {
+function handleImc() {
     const peso = parseFloat(document.getElementById("peso").value);
     const altura = parseFloat(document.getElementById("altura").value);
     if(isNaN(peso) || isNaN(altura)) {
@@ -39,13 +39,13 @@ var colorMap = {
     8: "coral",
     9: "aqua"
 };
-function colorDecider(cores, quadrados) {
+function paint(cores, quadrados) {
     for (var i = 0; i <= 3; i++) {
         color = cores[i];
         quadrados[i].style.backgroundColor = colorMap[color];
     }
 }
-function paintSquare() {
+function handlePaint() {
     const valueSquare = document.getElementById("square").value;
     const arrayColorsString = [valueSquare];
     const square1 = document.getElementById("1")
@@ -66,14 +66,14 @@ function paintSquare() {
         colorDecider(arrayColors, arraySquares);
     }    
 }
-function fazSoma(numbers) {
+function soma(numbers) {
     let soma = 0;
     numbers.forEach(element => {
         soma += element;
     });
     return document.getElementById("somado").innerText = `A soma é ${soma}!`
 }
-function somar() {
+function handleSoma() {
     const numbers = document.getElementById("soma").value;
     if(document.getElementById("soma").value == '') {
         document.getElementById("somado").innerText = "Digite números para somar!"
